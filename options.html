@@ -18,11 +18,22 @@ You should have received a copy of the GNU General Public License along with thi
     	<h1>OmniProxy - Settings</h1>
     	<article>
        		<section class="settings-card">
-        	<h2>Proxy</h2>
-			<select id="proxy" size="5">
-				<option value="http://translate.google.com/translate?hl=en&sl=es&tl=en&u=">Google Translate</option>
-				<option value="http://www.google.ie/gwt/x?u=">Google Mobilizer</option>
-			</select>
+        	<h2>Settings</h2>
+			<table>
+				<tr>
+					<td>
+					<b>Proxy:</b>
+					</td>
+					<td>
+					<select id="proxy" name="proxy">
+							<option value="http://translate.google.com/translate?sl=ja&tl=en&u=">Google Translate</option>
+							<option value="http://www.gmodules.com/ig/proxy?url=http://">Google Modules</option>
+							<option value="http://www.google.ie/gwt/x?u=">Google Mobilizer</option>
+							<option value="http://webcache.googleusercontent.com/search?q=cache:">Google Web Cache</option>
+						</select>
+					</td>
+				</tr>
+			</table>
 			</section>
 			<section id="settings-buttons" class="buttons" style="display: block;">
 				<input class="g-button g-button-submit" type="button" onclick="save_options()" value="Save">
@@ -30,9 +41,11 @@ You should have received a copy of the GNU General Public License along with thi
 		</article>
 		<article>
 			<h2>Choosing a proxy</h2>
-			<p><em>You can change the proxy that OmniProxy uses, if one does not work or has unintentional side effects.</em></p>
+			<p><em>You can change the proxy that OmniProxy uses if one does not work or has unintentional side effects.</em></p>
 			<p><b>Google Translate:</b> This is the best option for most people, it works on the most networks but can have errors on some web page layouts. This is the default selection.</p>
+			<p><b>Google Modules:</b> This is part of the discontinued iGoogle service and is primarily used for hosting gadgets. This works the best (and even allows you to download files), but may be blocked on some networks.</p>
 			<p><b>Google Mobilizer:</b> This is a discontinued service by Google that renders web pages for simple web browsers. Pages are rendered with almost all CSS styling removed.</p>
+			<p><b>Google Web Cache:</b> This is a cache used for Google Search.</p>
 		</article>
 	</section>
 </body>

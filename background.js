@@ -11,7 +11,7 @@ You should have received a copy of the GNU General Public License along with thi
 chrome.runtime.onInstalled.addListener(function(details){
     if(details.reason == "update" || "install"){
             if(localStorage.getItem("proxy") === null){
-            var proxy = "http://translate.google.com/translate?hl=en&sl=es&tl=en&u=";
+            var proxy = "http://translate.google.com/translate?sl=ja&tl=en&u=";
             localStorage["proxy"] = proxy;
             console.log("no proxy selected, defaulting to google translate");
         }

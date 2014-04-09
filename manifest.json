@@ -10,7 +10,8 @@
 	"content_scripts": [
         {
          "matches": [
-            "*://translate.google.com/*"
+            "*://translate.google.com/*",
+			"*://www.microsofttranslator.com/*"
          ],
          "css": ["proxy.css"],
          "run_at" : "document_start"

@@ -567,18 +567,17 @@ dl dd {
 	bottom: 20px;
 	left: 20px;
 }
+table tr td:first-child {
+	width: 100px;
+}
+table tr td:last-child {
+	width: 420px;
+}
 #proxy {
 	width: 100%;
-	background: transparent;
-	color: #333;
 	font: 81.25% arial, sans-serif;
 	line-height: 1;
 	font-size: 15px;
-	border: 0px;
-	padding: 0px;
-	outline: none;
-	-webkit-appearance: none;
-	padding-right: 10px;
 }
 input {
 	outline: none;
