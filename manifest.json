@@ -1,7 +1,7 @@
 {
 "manifest_version": 2,
 	"name": "OmniProxy",
-	"version": "0.1",
+	"version": "0.9",
 	"description": "Use proxies in Google Chrome from the search bar",
 	"options_page": "options.html",
 	"omnibox": {
@@ -11,7 +11,8 @@
         {
          "matches": [
             "*://translate.google.com/*",
-			"*://www.microsofttranslator.com/*"
+            "*://www.google.ie/gwt/*",
+            "*://webcache.googleusercontent.com/*"
          ],
          "css": ["proxy.css"],
          "run_at" : "document_start"

@@ -16,7 +16,7 @@ chrome.runtime.onInstalled.addListener(function(details){
             console.log("no proxy selected, defaulting to google translate");
         }
     }
-    // chrome.tabs.create({'url': chrome.extension.getURL('welcome.html')});
+    chrome.tabs.create({'url': chrome.extension.getURL('welcome.html')});
 });
 
 // OmniProxy
