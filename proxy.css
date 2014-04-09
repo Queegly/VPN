@@ -1,0 +1,5 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#wtgbr,#gt-bbar,#gt-appbar,#google-infowindow {display:none !important;}
+#contentframe {top: 0px !important}

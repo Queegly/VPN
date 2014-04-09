@@ -1,0 +1,39 @@
+<!--
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
+!-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>OmniProxy</title>
+<link rel="icon" type="image/png" href="icon16.png">
+<script src="proxy.js"></script>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section id="wrapper" class="wrapper enabled">
+    	<h1>OmniProxy - Settings</h1>
+    	<article>
+       		<section class="settings-card">
+        	<h2>Proxy</h2>
+			<select id="proxy" size="5">
+				<option value="http://translate.google.com/translate?hl=en&sl=es&tl=en&u=">Google Translate</option>
+				<option value="http://www.google.ie/gwt/x?u=">Google Mobilizer</option>
+			</select>
+			</section>
+			<section id="settings-buttons" class="buttons" style="display: block;">
+				<input class="g-button g-button-submit" type="button" onclick="save_options()" value="Save">
+			</section>
+		</article>
+		<article>
+			<h2>Choosing a proxy</h2>
+			<p><em>You can change the proxy that OmniProxy uses, if one does not work or has unintentional side effects.</em></p>
+			<p><b>Google Translate:</b> This is the best option for most people, it works on the most networks but can have errors on some web page layouts. This is the default selection.</p>
+			<p><b>Google Mobilizer:</b> This is a discontinued service by Google that renders web pages for simple web browsers. Pages are rendered with almost all CSS styling removed.</p>
+		</article>
+	</section>
+</body>
+</html>
