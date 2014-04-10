@@ -11,7 +11,7 @@
         {
          "matches": [
             "*://translate.google.com/*",
-            "*://www.google.ie/gwt/*",
+            "*://www.proxyweb.net/*",
             "*://webcache.googleusercontent.com/*"
          ],
          "css": ["proxy.css"],

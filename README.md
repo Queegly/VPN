@@ -1,10 +1,10 @@
 OmniProxy
 ================
-OmniProxy is an extension for Google Chrome that uses/modifies web services to act as crude proxies for accessing blocked internet content. OmniProxy supports using services like Google Translate, Google Modules, Google Web Cache, and more as proxies. OmniProxy also enhances these services for use as a proxy. For example when using Google Translate, the Translate bar is hidden and only the web page is visible.
+OmniProxy is an extension for Google Chrome that uses/modifies web services to act as proxies for accessing blocked internet content. OmniProxy supports using services like Google Translate, Anonymouse, Google Modules, ProxyWeb, and more as proxies. OmniProxy also enhances these services for use as a proxy. For example when using Google Translate, the Translate bar is hidden and only the web page is visible.
 
-Simply type 'omni' in the in Chrome's search bar, then a space, and type in the URL you want to view. OmniProxy will then open the URL in the selected proxy in the current tab. OmniProxy does modify the non-proxy functionality of the site you use as a proxy, so if you have problems using those sites normally you should temporarily disable OmniProxy.
+Simply type 'omni' in Chrome's search bar, then a space, and type in the URL you want to view. OmniProxy will then open the URL in the selected proxy in the current tab. In some cases, OmniProxy modifies the functionality of the site you use as a proxy. If you have problems using those sites normally you should temporarily disable OmniProxy.
 
-__OmniProxy icon from the [Faenza](http://tiheum.deviantart.com/art/Faenza-Icons-173323228) icon pack.__
+_OmniProxy icon from the [Faenza](http://tiheum.deviantart.com/art/Faenza-Icons-173323228) icon pack._
 
 ---------------------------------------------------------
 __New in OmniProxy 1.0:__
