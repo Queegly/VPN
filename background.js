@@ -6,17 +6,20 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-// Update Message
+// Check for settings & version
 
 chrome.runtime.onInstalled.addListener(function(details){
     if(details.reason == "update" || "install"){
-            if(localStorage.getItem("proxy") === null){
+        if(localStorage.getItem("proxy") === null){
             var proxy = "http://translate.google.com/translate?sl=ja&tl=en&u=";
             localStorage["proxy"] = proxy;
             console.log("no proxy selected, defaulting to google translate");
         }
     }
-    chrome.tabs.create({'url': chrome.extension.getURL('welcome.html')});
+    if(localStorage.getItem("version") != chrome.runtime.getManifest().version){
+        chrome.tabs.create({'url': chrome.extension.getURL('welcome.html')});
+        localStorage["version"] = chrome.runtime.getManifest().version
+    }
 });
 
 // OmniProxy

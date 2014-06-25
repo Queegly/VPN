@@ -7,45 +7,45 @@ You should have received a copy of the GNU General Public License along with thi
 */
 
 function save_options() {
-    var select = document.getElementById("proxy");
-    var proxy = select.children[select.selectedIndex].value;
-    localStorage["proxy"] = proxy;
+	var select = document.getElementById("proxy");
+	var proxy = select.children[select.selectedIndex].value;
+	localStorage["proxy"] = proxy;
 }
 
 function restore_options() {
-    var favorite = localStorage["proxy"];
-    if (!favorite) {
-        return;
-    }
-    var select = document.getElementById("proxy");
-    for (var i = 0; i < select.children.length; i++) {
-        var child = select.children[i];
-        if (child.value == favorite) {
-            child.selected = "true";
-        break;
-        }
-    }
+	var favorite = localStorage["proxy"];
+	if (!favorite) {
+		return;
+	}
+	var select = document.getElementById("proxy");
+	for (var i = 0; i < select.children.length; i++) {
+		var child = select.children[i];
+		if (child.value == favorite) {
+			child.selected = "true";
+		break;
+		}
+	}
 }
 
 window.addEventListener('load',function(){
-    var favorite = localStorage["proxy"];
-    if (!favorite) {
-        return;
-    }
-    var select = document.getElementById("proxy");
-    for (var i = 0; i < select.children.length; i++) {
-        var child = select.children[i];
-        if (child.value == favorite) {
-            child.selected = "true";
-            break;
-        }
-    }
+	var favorite = localStorage["proxy"];
+	if (!favorite) {
+		return;
+	}
+	var select = document.getElementById("proxy");
+	for (var i = 0; i < select.children.length; i++) {
+		var child = select.children[i];
+		if (child.value == favorite) {
+			child.selected = "true";
+			break;
+		}
+	}
 });
 
 function startSearch(event) {       
-    document.getElementById("searchform").submit();     
+	document.getElementById("searchform").submit();     
 }
 
 window.onload = function(){
-    document.querySelector('input[value="Save"]').onclick=save_options;
+	document.querySelector('input[value="Save"]').onclick=save_options;
 }
