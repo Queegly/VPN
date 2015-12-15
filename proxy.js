@@ -9,11 +9,11 @@ You should have received a copy of the GNU General Public License along with thi
 function save_options() {
 	var select = document.getElementById("proxy");
 	var proxy = select.children[select.selectedIndex].value;
-	localStorage["proxy"] = proxy;
+	localStorage.proxy = proxy;
 }
 
 function restore_options() {
-	var favorite = localStorage["proxy"];
+	var favorite = localStorage.proxy;
 	if (!favorite) {
 		return;
 	}
@@ -22,13 +22,13 @@ function restore_options() {
 		var child = select.children[i];
 		if (child.value == favorite) {
 			child.selected = "true";
-		break;
+			break;
 		}
 	}
 }
 
-window.addEventListener('load',function(){
-	var favorite = localStorage["proxy"];
+window.addEventListener('load', function() {
+	var favorite = localStorage.proxy;
 	if (!favorite) {
 		return;
 	}
@@ -42,10 +42,10 @@ window.addEventListener('load',function(){
 	}
 });
 
-function startSearch(event) {       
-	document.getElementById("searchform").submit();     
+function startSearch(event) {
+	document.getElementById("searchform").submit();
 }
 
-window.onload = function(){
-	document.querySelector('input[value="Save"]').onclick=save_options;
-}
+window.onload = function() {
+	document.querySelector('input[value="Save"]').onclick = save_options;
+};
