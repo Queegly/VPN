@@ -5,7 +5,9 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 */
-
+* {
+    box-sizing: border-box;
+}
 html, body {
     height: 100%;
 }
@@ -17,7 +19,9 @@ body {
     font-weight: 300;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    min-height: 100%;
 }
 select, .button {
     width: 150px;

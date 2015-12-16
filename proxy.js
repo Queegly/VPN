@@ -7,7 +7,7 @@ You should have received a copy of the GNU General Public License along with thi
 */
 
 function save_options() {
-	var select = document.getElementById("proxy");
+	var select = document.getElementById('proxy');
 	var proxy = select.children[select.selectedIndex].value;
 	localStorage.proxy = proxy;
 }
@@ -17,11 +17,11 @@ function restore_options() {
 	if (!favorite) {
 		return;
 	}
-	var select = document.getElementById("proxy");
+	var select = document.getElementById('proxy');
 	for (var i = 0; i < select.children.length; i++) {
 		var child = select.children[i];
 		if (child.value == favorite) {
-			child.selected = "true";
+			child.selected = 'true';
 			break;
 		}
 	}
@@ -32,20 +32,24 @@ window.addEventListener('load', function() {
 	if (!favorite) {
 		return;
 	}
-	var select = document.getElementById("proxy");
+	var select = document.getElementById('proxy');
 	for (var i = 0; i < select.children.length; i++) {
 		var child = select.children[i];
 		if (child.value == favorite) {
-			child.selected = "true";
+			child.selected = 'true';
 			break;
 		}
 	}
 });
 
-function startSearch(event) {
-	document.getElementById("searchform").submit();
-}
-
 window.onload = function() {
-	document.querySelector('input[value="Save"]').onclick = save_options;
+	var saveButton = document.getElementById('saveButton');
+	var proxySelect = document.getElementById('proxy');
+	saveButton.onclick = function() {
+		save_options();
+		this.value = 'Saved!';
+	};
+	proxySelect.onclick = function() {
+		saveButton.value = 'Save';
+	};
 };
