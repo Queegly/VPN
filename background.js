@@ -13,7 +13,7 @@ chrome.runtime.onInstalled.addListener(function(details){
         if(localStorage.getItem('proxy') === null){
             var proxy = 'http://translate.google.com/translate?sl=ja&tl=en&u=';
             localStorage.proxy = proxy;
-            console.log('no proxy selected, defaulting to google translate');
+            console.log('No proxy selected, defaulting to first option');
         }
     }
     if(localStorage.getItem('version') != chrome.runtime.getManifest().version){

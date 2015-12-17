@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
 });
 
 window.onload = function() {
-	var saveButton = document.getElementById('saveButton');
+	var saveButton = document.getElementById('save');
 	var proxySelect = document.getElementById('proxy');
 	saveButton.onclick = function() {
 		save_options();
