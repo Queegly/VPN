@@ -6,8 +6,7 @@ Simply type 'omni' in Chrome's search bar, then a space, then the URL you want t
 
 ---------------------------------------------------------
 
-__New in OmniProxy 1.1__
-* Taken over by new author ErikBoesen!
+__New in OmniProxy 2.0__ by [Erik Boesen](https://github.com/ErikBoesen)
 * Removed Google Translate due to too many stylistic and text errors
 * Removed Google Modules due to its shutdown by Google
 * Added hide.me
