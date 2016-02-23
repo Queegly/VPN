@@ -6,8 +6,17 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-/* Google Web Cache, ProxyWeb, ProxyWeb, Hide.me */
-
-#google-cache-hdr, div[style="z-index:9999998;width:100%;height:54px;text-align:center;margin:0;border-bottom:2px solid #725554;color:#000000;background-image:url(images/backbrushed.gif);font-size:11px;font-weight:bold;color:#787473;font-family:Bitstream Vera Sans,arial,sans-serif;padding:0px;"], #xmail, div#include {
+#google-cache-hdr,div[style="z-index:9999998;width:100%;height:54px;text-align:center;margin:0;border-bottom:2px solid #725554;color:#000000;background-image:url(images/backbrushed.gif);font-size:11px;font-weight:bold;color:#787473;font-family:Bitstream Vera Sans,arial,sans-serif;padding:0px;"], #xmail, div#include, #wtgbr, #gt-bbar, #gt-appbar, #google-infowindow, #lite-page #lite-header, #lite-footer #lite-searchbox, #lite-footer #lite-footer-link, #lite-footer #lite-footer-text, div[style="padding:4px;margin-bottom:2px;background:#eee;font:12px Verdana,Arial,Tahoma;color:#000;"] {
     display: none !important;
+}
+
+/* Fix for Google Translate */
+#contentframe {top: 0px !important}
+
+/* Fix for Hide.me */
+#wrapper #content #error:before {
+   content: 'Since Hide.me doesnt play nice with OmniProxy, ignore the error they are showing here and press the Go button below to view the page. The error they generated was "';
+}
+#wrapper #content #error:after {
+   content: '"'
 }

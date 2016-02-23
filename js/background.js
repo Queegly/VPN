@@ -9,17 +9,14 @@ You should have received a copy of the GNU General Public License along with thi
 // Check for settings & version
 
 chrome.runtime.onInstalled.addListener(function(details){
-    if(details.reason == 'update' || 'install'){
-        if(localStorage.getItem('proxy') === null){
-            var proxy = 'http://translate.google.com/translate?sl=ja&tl=en&u=';
-            localStorage.proxy = proxy;
-            console.log('No proxy selected, defaulting to first option');
-        }
-    }
-    if(localStorage.getItem('version') != chrome.runtime.getManifest().version){
-        chrome.tabs.create({'url': chrome.extension.getURL('welcome.html')});
-        localStorage.proxy = chrome.runtime.getManifest().version;
-    }
+  if((localStorage.getItem('proxy') === null) || (localStorage.getItem('proxy') === "undefined")){
+      localStorage["proxy"] = 'http://translate.google.com/translate?sl=ja&tl=en&u=';
+      console.log('No proxy selected, defaulting to first option');
+  }
+  if(localStorage.getItem('version') != chrome.runtime.getManifest().version){
+      chrome.tabs.create({'url': chrome.extension.getURL('welcome.html')});
+      localStorage["version"] = chrome.runtime.getManifest().version;
+  }
 });
 
 // OmniProxy
